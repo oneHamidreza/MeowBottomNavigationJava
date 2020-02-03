@@ -1,0 +1,45 @@
+apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.android.library'
+
+def library_groupId = 'com.etebarian'
+def library_artifactId = 'meow-bottom-navigation-java'
+def library_versionCode = 1_0_01_02_00
+def library_versionName = '1.2.0'
+
+publish {
+
+    userOrg = 'infinitydesign'
+    repoName = 'meow'
+    groupId = library_groupId
+    artifactId = library_artifactId
+    publishVersion = library_versionName
+    desc = 'Meow Bottom Navigation'
+    website = 'https://github.com/shetmobile/MeowBottomNavigation'
+
+}
+
+android {
+    compileSdkVersion compileSdk_version
+
+    defaultConfig {
+        minSdkVersion minSdk_version
+        targetSdkVersion targetSdk_version
+        versionCode library_versionCode
+        versionName library_versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation "com.android.support:appcompat-v7:28.0.0"
+}
