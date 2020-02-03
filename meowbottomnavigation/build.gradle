@@ -13,8 +13,8 @@ publish {
     groupId = library_groupId
     artifactId = library_artifactId
     publishVersion = library_versionName
-    desc = 'Meow Bottom Navigation'
-    website = 'https://github.com/shetmobile/MeowBottomNavigation'
+    desc = 'Meow Bottom Navigation For Java Projects without androidx'
+    website = 'https://github.com/shetmobile/MeowBottomNavigationJava'
 
 }
 
